@@ -32,14 +32,26 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     }
 
-    nav .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #4CAF50, #2E7D32);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between logo and text */
+}
+
+.logo-title img {
+    height: 60px; /* Adjust logo size as needed */
+    width: auto;
+}
+
+.logo-title h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #49c26d; /* Green color to match your vegetable theme */
+    /* Or keep your existing classes: text-xl font-bold text-gray-900 */
+}
 
     nav .nav-links {
       display: flex;
@@ -408,11 +420,14 @@
 </head>
 <body>
   <nav>
-    <div class="logo">🥕 VegeHut</div>
+    <div class="logo-title">
+      <img src="logo.png" alt="logo">
+      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
+    </div>
     <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">Products</a>
-      <a href="#">Register</a>
+      <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
   </nav>
