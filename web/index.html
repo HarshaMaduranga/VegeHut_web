@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="gradient-bg min-h-screen flex items-center justify-center p-4">
-    
+     
     <div id="loginPage" class="w-full max-w-6xl mx-auto">
         <div class="container">
             <div class="left">
@@ -30,9 +30,12 @@
             </div>
             
             <div class="right">
-                <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12 w-full max-w-md mx-auto">
+                <div>
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
+                        <div class="logo-title">
+                           <img src="logo.png" alt="logo">
+                           <h2 class="title">VegeHut</h2> 
+                        </div>
                         <p class="text-gray-600">Sign in to your account</p>
                     </div>
                     
@@ -88,32 +91,7 @@
     </div>
 
     <div id="signupPage" class="w-full max-w-6xl mx-auto hidden">
-        <div class="grid lg:grid-cols-2 gap-8 items-center">
-            <div class="text-center lg:text-left slide-in">
-                <div class="mb-8">
-                    <h1 class="text-6xl lg:text-7xl font-bold text-white mb-4">VegeHut</h1>
-                    <p class="text-xl lg:text-2xl text-white/90 font-light">
-                        Join our community of organic food lovers
-                    </p>
-                </div>
-                <div class="hidden lg:block">
-                    <div class="space-y-4 text-white/80">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                            <span class="text-lg">Access to premium products</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                            <span class="text-lg">Exclusive member discounts</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                            <span class="text-lg">Fast & reliable delivery</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+        <div class="items-center">   
             <div class="bounce-in">
                 <div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-12 w-full max-w-md mx-auto">
                     <div class="text-center mb-8">
@@ -177,12 +155,13 @@
             </div>
         </div>
     </div>
-
+    
     <div id="homePage" class="hidden min-h-screen bg-gray-50">
         <nav class="bg-white shadow-lg border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
-                    <div class="flex items-center">
+                    <div class="logo-title">
+                        <img src="logo.png" alt="logo" >
                         <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
                     </div>
                     
@@ -223,6 +202,12 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Welcome back!</h3>
                         <p class="text-gray-600">You are successfully logged in and ready to explore our fresh produce!</p>
                     </div>
+                </div><br><br><br>
+                <div class=" items-center space-x-20">
+                        <a href="https://www.youtube.com/" class="btn-home">Home</a>
+                        <a href="#" class="btn-home">Products</a>
+                        <a href="#" class="btn-home">About</a>
+                        <a href="#" class="btn-home">Contact</a>
                 </div>
             </div>
         </div>
