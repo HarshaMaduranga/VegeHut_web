@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search - VegeHut.lk</title>
+    <style>
+        body {
+        background-image: url('1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #388e3c;
+        }
+        .results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Search for Vegetables</h1>
+        <p>Find fresh produce from local farmers</p>
+    </header>
+
+    <div class="search-container">
+        <form onsubmit="searchVegetables(event)">
+            <input type="text" id="searchInput" placeholder="Enter vegetable name or location..." />
+            <button type="submit">Search</button>
+        </form>
+
+        <div class="results" id="searchResults">
+            <!-- Search results will appear here -->
+        </div>
+    </div>
+
+    <script>
+        function searchVegetables(event) {
+            event.preventDefault();
+            const keyword = document.getElementById('searchInput').value.trim();
+            const results = document.getElementById('searchResults');
+            
+            if (keyword === "") {
+                results.innerHTML = "<p>Please enter a keyword to search.</p>";
+                return;
+            }
+
+            // Example mock results:
+            results.innerHTML = `
+                <p>Showing results for: <strong>${keyword}</strong></p>
+                <ul>
+                    <li>🥕 Fresh Carrots – Kurunegala Region</li>
+                    <li>🌽 Sweet Corn – Gampaha Region</li>
+                    <li>🍅 Tomatoes – Matale Farms</li>
+                </ul>
+            `;
+        }
+    </script>
+
+</body>
+</html>
