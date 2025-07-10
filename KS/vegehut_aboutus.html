@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - VegeHut.lk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 40px 0;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2e7d32;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #4CAF50, #8bc34a);
+            border-radius: 2px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            border-color: #4CAF50;
+        }
+
+        .team-member .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #8bc34a);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: white;
+            font-weight: bold;
+        }
+
+        .team-member h3 {
+            color: #2e7d32;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .team-member .id {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .value-item {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .value-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .value-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .value-item h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .mission, .vision {
+            background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .mission h3, .vision h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.6);
+        }
+
+        .impact-section {
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+            color: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .impact-section h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-title img {
+    height: 60px; 
+    width: auto;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #49c26d; 
+}
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #fafdfa, #2E7D32);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+    </style>
+</head>
+<body>
+     <nav>
+    <div class="logo-title">
+      <img src="logo.png" alt="logo">
+      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Listings</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+    <header>
+        <div class="container">
+            <h1>About Us - VegeHut.lk</h1>
+            <p>Empowering Farmers. Connecting Markets. Delivering Freshness.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">🌿 Who We Are</h2>
+            <div class="card">
+                <p style="font-size: 1.1em; text-align: center; margin-bottom: 30px;">
+                    We are a passionate group of undergraduates from the University of Sri Jayewardenepura, 
+                    committed to creating innovative tech solutions for real-world problems.
+                </p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="avatar">NG</div>
+                        <h3>N.G.H.M. Namalgamuwa</h3>
+                        <div class="id">ICT/24/888</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">WR</div>
+                        <h3>W.D.S.M. Rupasinghe</h3>
+                        <div class="id">ICT/24/917</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">KW</div>
+                        <h3>K.W.K.S. Wickramaarachchi</h3>
+                        <div class="id">ICT/24/948</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">SM</div>
+                        <h3>S.C. Munasingha</h3>
+                        <div class="id">ICT/24/886</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">GT</div>
+                        <h3>G.T. Nethmini</h3>
+                        <div class="id">ICT/24/890</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">🍅 What We Do</h2>
+            <div class="card">
+                <p style="font-size: 1.1em; margin-bottom: 20px;">
+                    VegeHut.lk is a revolutionary web-based platform designed to connect farmers directly with 
+                    large-scale buyers like wholesalers, retailers, and restaurants. We aim to eliminate 
+                    middleman exploitation and deliver fresh produce directly from the farm to the market.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div>Farmers Connected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div>Buyers Registered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div>Transactions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">🎯 Our Mission & Vision</h2>
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>🎯 Our Mission</h3>
+                    <p>To support Sri Lankan farmers by providing equal market access and improving income through direct buyer connections, while promoting sustainable agricultural practices.</p>
+                </div>
+                <div class="vision">
+                    <h3>🔭 Our Vision</h3>
+                    <p>A transparent, efficient agricultural marketplace where freshness meets fairness, creating a sustainable ecosystem that benefits both farmers and consumers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">🌈 Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="icon">⚖️</div>
+                    <h3>Fairness & Farmer Empowerment</h3>
+                    <p>Ensuring fair prices and empowering farmers with direct market access</p>
+                </div>
+                <div class="value-item">
+                    <div class="icon">🔍</div>
+                    <h3>Transparency in Trade</h3>
+                    <p>Open and honest transactions with clear pricing and quality standards</p>
+                </div>
+                <div class="value-item">
+                    <div class="icon">🚀</div>
+                    <h3>Tech-driven Innovation</h3>
+                    <p>Leveraging technology to modernize agricultural supply chains</p>
+                </div>
+                <div class="value-item">
+                    <div class="icon">🌱</div>
+                    <h3>Sustainable Supply Chain</h3>
+                    <p>Promoting eco-friendly practices and reducing food waste</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="impact-section">
+            <div class="container">
+                <h2>🌟 Our Impact</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">25%</div>
+                        <div>Increase in Farmer Income</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30%</div>
+                        <div>Reduction in Food Waste</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15%</div>
+                        <div>Faster Market Access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="section-title">🚀 Our Story</h2>
+            <div class="card">
+                <p style="font-size: 1.1em; margin-bottom: 20px;">
+                    VegeHut.lk was born from our observation of the challenges faced by Sri Lankan farmers in accessing 
+                    fair markets. As ICT students at the University of Sri Jayewardenepura, we recognized the power 
+                    of technology to bridge the gap between farmers and buyers.
+                </p>
+                <p style="font-size: 1.1em;">
+                    Our platform eliminates intermediaries, reduces costs, and ensures fresh produce reaches consumers 
+                    faster while providing farmers with better income opportunities.
+                </p>
+            </div>
+        </section>
+
+        <div class="cta">
+            <a href="#" class="cta-button">Join Our Platform Today</a>
+        </div>
+    </div>
+</body>
+</html>
