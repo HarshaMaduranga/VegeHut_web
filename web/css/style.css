@@ -39,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; /* spacing between image and text */
+  gap: 0.5rem; 
 }
 
 .logo-title img {
@@ -71,9 +71,9 @@
 
 
 .title {
-  font-size:  2.25rem; /* like text-3xl */
+  font-size:  2.25rem; 
   font-weight: bold;
-  color: #1f2937; /* Tailwind's gray-900 */
+  color: #1f2937; 
   margin-bottom: 0.5rem;
 }
 
@@ -124,7 +124,7 @@
       text-align: center;
       padding: 2rem;
       background: linear-gradient(135deg, rgba(225, 231, 225, 0.8), rgba(227, 233, 227, 0.8)), 
-                  url('background.jpg');
+                  url('../images/background.jpg');
       background-size: cover;
       background-position: center
       color: white;
