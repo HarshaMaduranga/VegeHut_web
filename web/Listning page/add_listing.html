@@ -28,18 +28,17 @@
   </p>
 </h1>
 
-  <form>
-    <input type="text" placeholder="Farmer Name" required>
-    <input type="text" placeholder="Location" required>
-    <input type="text" placeholder="Vegetable Type" required>
-    <input type="number" placeholder="Amount (kg)" required>
-    <input type="number" placeholder="Price (Rs/kg)" required>
-    <input type="number" placeholder="Conatct number"required>
-    <textarea placeholder="Description"></textarea>
-    <button type="submit" style="background-color: rgb(40, 172, 35); color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+  <form action="vegetable.php" method="post">
+    <input type="text" placeholder="Farmer Name" name="farmername" required>
+    <input type="text" placeholder="Location" name="location" required>
+    <input type="text" placeholder="Vegetable Type" name="vegetabletype" required>
+    <input type="number" placeholder="Amount (kg)" name="amount" required>
+    <input type="number" placeholder="Price (Rs/kg)" name="price" required>
+    <input type="number" placeholder="Conatct number" name="contactnumber" required>
+    <textarea placeholder="Description" name ="description"></textarea>
+  <button type="submit" style="background-color: rgb(40, 172, 35); color: white; padding: 10px 20px; border: none; border-radius: 5px;">
   Submit
 </button>
-
-  </form>
+</form>
 </body>
 </html>
