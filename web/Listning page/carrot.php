@@ -15,7 +15,7 @@
   </style>
 </head>
 <body>
-    <img src="../images/cucumber4.jpg"
+   <img src="../images/carrots.jpg"
      style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1; filter: blur(4px); object-fit: cover;">
 
   <h2>
@@ -25,45 +25,17 @@
                         -1px 1px 0 #000,  
                          1px 1px 0 #000;
                          font-size: 40px;">
-    Cucumber Sellers
+    Carrot Sellers
   </p>
 </h2>
 
-
-   <div class="seller">
-    <h3>Farmer Chandani</h3>
-    <p>Location: Badulla</p>
-    <p>Amount: 500kg</p>
-    <p>Price: Rs. 42/kg</p>
-     <p>Contact number:<a href="https://wa.me/+94778157518"target="_blank">+94778157518</a></p>
-     <p>Description:HORDI Green cucumber, fresh and clean</p>
-  </div>
-
-   <div class="seller">
-    <h3>Farmer Ajith</h3>
-    <p>Location: Nuwara Eliya</p>
-    <p>Amount: 500kg</p>
-    <p>Price: Rs. 48/kg</p>
-    <p>Contact number:<a href="https://wa.me/+94778157518"target="_blank">+94778157518</a></p>
-    <p>Description:HORDI White with high quality</p>
-  </div>
-
-   <div class="seller">
-    <h3>Farmer Pasindu</h3>
-    <p>Location: Welimada</p>
-    <p>Amount: 500kg</p>
-    <p>Price: Rs. 48/kg</p>
-    <p>Contact number:<a href="https://wa.me/+94778157518"target="_blank">+94778157518</a></p>
-    <p>Description:HORDI Green and White fresh and clean</p>
-  </div>
-
-  
+  <!--Load seller data from PHP -->
+  <?php include 'carrotselect.php'; ?>
 
   <button onclick="location.href='add_listing.html'" 
         style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
   Add Your Product
-</button>
+  </button>
 
 </body>
 </html>
-

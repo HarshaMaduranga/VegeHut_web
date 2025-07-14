@@ -11,23 +11,63 @@
     }
     input, textarea { width: 90%; padding: 10px; margin: 10px 0; }
     button { padding: 10px 20px; background: green; color:black; }
+
+  .input-field {
+  width: 96%;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 13px; 
+  color: #747474;              
+}
+
+
   </style>
 </head>
 <body>
     <img src="../images/addlist3.jpg"
      style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1; filter: blur(3px); object-fit: cover;">
-
+    <center>
     <h1>
-  <p style="color:rgb(70, 255, 73); 
+      <p style="color:rgb(70, 255, 73); 
             text-shadow: -1px -1px 0 #000,  
                          1px -1px 0 #000,  
                         -1px 1px 0 #000,  
                          1px 1px 0 #000;
                          font-size: 40px;">
-    Add Your Vegetable Listing
-  </p>
-</h1>
+        Add Your Vegetable Listing
+      </p>
+    </h1>
+    </center>
+  <form method="post" action="vegetable.php">
+  <input type="text" placeholder="Farmer Email" name="farmeremail" required>
+  <input type="text" placeholder="Farmer Name" name="farmername" required>
+  <input type="text" placeholder="Location" name="location" required>
+  <label for="vegetabletype"></label>
+<select name="vegetabletype" class="input-field" id="vegetabletype" required>
+  <option value="">Vegetable Type</option>
+  <option value="Carrot">Carrot</option>
+  <option value="Cucumber">Cucumber</option>
+  <option value="Tomato">Tomato</option>
+  <option value="Cabbage">Cabbage</option>
+  <option value="Pumpkin">Pumpkin</option>
+  <option value="Potato">Potato</option>
+  <option value="Onion">Onion</option>
+  <option value="Beetroot">Beetroot</option>
+  <option value="Manioc">Manioc</option>
+</select>
+  <input type="number" placeholder="Amount (kg)" name="amount" required>
+  <input type="number" placeholder="Price (Rs/kg)" name="price" required>
+  <input type="text" placeholder="Contact number" name="contactnumber" required>
+  <textarea placeholder="Description" name="description"></textarea>
 
+<<<<<<< HEAD
+  <center><button type="submit" style="background-color: rgb(40, 172, 35); color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+    Submit
+  </button></center>
+</form>
+
+=======
   <form action="vegetable.php" method="post">
     <input type="text" placeholder="Farmer Name" name="farmername" required>
     <input type="text" placeholder="Location" name="location" required>
@@ -40,5 +80,6 @@
   Submit
 </button>
 </form>
+>>>>>>> 0bff54b001759c57aa13f8c534e116840d9f1779
 </body>
 </html>
