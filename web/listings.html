@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listings</title>
+  <link rel="stylesheet" href="css/listiningstyle.css">
+  <style>
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-title img {
+    height: 60px; 
+    width: auto;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #49c26d; 
+}
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #fafdfa, #2E7D32);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+    
+  </style>
+</head>
+<body>
+   <nav>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="logo">
+      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
+    </div>
+    <div class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="#">Listings</a>
+      <a href="vegehut_aboutus.html">About Us</a>
+      <a href="index.html">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>
+  <p style="color:rgb(0, 0, 0); 
+                         font-size: 40px;">
+    Products List
+  </p>
+</h1>
+
+    <a href="Listning page/carrot.html" class="card-link">
+    <div class="cards">
+      <div class="card">
+        <img src= "images/carrots.jpg"alt="Carrots">
+        <div class="card-content">
+          <h3>Premium Carrots - 500kg</h3>
+          <p class="location">📍 Nuwara Eliya District</p>
+          <p class="price">Rs. 350/kg</p>
+        </div>
+      </div>
+    </a>
+<a href="Listning page/cabbage.html" class="card-link">
+      <div class="card">
+        <img src="images/cabbage2.jpg" alt="Cabbage">
+        <div class="card-content">
+          <h3>Fresh Cabbage - 300kg</h3>
+          <p class="location">📍 Nuwara Eliya</p>
+          <p class="price">Rs. 150/kg</p>
+        </div>
+      </div>
+    </a>
+    <a href="Listning page/tomato.html" class="card-link">
+      <div class="card">
+        <img src="images/tomatoes2.jpg" alt="Tomatoes">
+        <div class="card-content">
+          <h3>Tomatoes - 200kg</h3>
+          <p class="location">📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+    </a>
+     <a href="Listning page/beetroot.html" class="card-link">
+      <div class="card">
+        <img src="images/beetroot2.jpg" alt="Beetroot" />
+        <div class="card-content">
+          <h4>Beetroot - 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+     </a>
+     <a href="Listning page/cucumber.html" class="card-link">
+      <div class="card">
+        <img src="images/cucumber4.jpg" alt="Cucumber" />
+        <div class="card-content">
+          <h4>Cucumber - 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+     </a>
+     <a href="Listning page/manioc.html" class="card-link">
+
+      <div class="card">
+        <img src="images/manioc2.jpg"alt="Manioc" />
+        <div class="card-content">
+          <h4>Manioc - 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+     </a>
+     <a href="Listning page/onion.html" class="card-link">
+
+      <div class="card">
+        <img src="images/onion1.jpg"alt="Onion" />
+        <div class="card-content">
+          <h4>Onion - 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+      </a>
+     <a href="Listning page/potato.html" class="card-link">
+
+      <div class="card">
+        <img src="images/potato1.jpg"alt="Potato" />
+        <div class="card-content">
+          <h4>Potato - 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+     </a>
+     <a href="Listning page/pumpkin.html" class="card-link">
+
+       <div class="card">
+        <img src="images/pumpkin2.jpg"alt="Pumpkin" />
+        <div class="card-content">
+          <h4>Pumpkin- 200kg</h4>
+          <p>📍 Kandy District</p>
+          <p class="price">Rs. 60/kg</p>
+        </div>
+      </div>
+     </a>
+    </div>
+  </div>
+</body>
+</html>
