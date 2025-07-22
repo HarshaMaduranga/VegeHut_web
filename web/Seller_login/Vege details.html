@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <Style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(#ffffff);
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-title img {
+    height: 60px; 
+    width: auto;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #49c26d; 
+}
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #fafdfa, #2E7D32);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(225, 231, 225, 0.7), rgba(227, 233, 227, 0.7)), 
+                  url('../images/vegebackground.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(76, 175, 80, 0.2) 0%, transparent 70%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #4CAF50;
+      -webkit-text-stroke: 1px black;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 700;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient( #4CAF50);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3); 
+    }
+
+    .btn-secondary {
+      background: linear-gradient( #4CAF50);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Sections */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-alt {
+      background-color:#4CAF50;
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      margin: 10rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: #333;
+      font-weight: 700;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .card .price {
+      color: #4CAF50;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(46, 125, 50, 0.1));
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(175, 76, 76, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(76, 175, 80, 0.2);
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .step p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Benefits */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .benefit {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefit h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .benefit p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, #2E7D32, #1B5E20);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 5rem;
+    }
+
+    .footer p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* Floating elements */
+    .floating-element {
+      position: absolute;
+      opacity: 0.1;
+      pointer-events: none;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+  </Style>
+</head>
+<body>
+  <nav>
+    <div class="logo-title">
+      <img src="logo.png" alt="logo">
+      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="listings.html">Listings</a>
+      <a href="vegehut_aboutus.html">About Us</a>
+      <a href="index.html">Logout</a>
+    </div>
+  </nav>
+ <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+  <h2 style="text-align: center;">Add Vegetable Listing</h2>
+
+  <form action="#" method="POST">
+    <label for="vegType">Vegetable Type:</label><br>
+    <input type="text" id="vegType" name="vegType" placeholder="e.g., Carrot" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="amount">Amount (kg):</label><br>
+    <input type="number" id="amount" name="amount" placeholder="e.g., 100" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="price">Price (Rs / kg):</label><br>
+    <input type="number" id="price" name="price" placeholder="e.g., 250" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" placeholder="Write something about your vegetables..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+     <form action="Listning page/add_listing.html" style="margin-top: 20px;">
+    <button class="btn btn-primary" type="submit" style="width: 100%;">- Select Vegetable -</button>
+  </form>
+
+  <form action="listings.html" style="margin-top: 15px;">
+    <button class="btn btn-secondary" type="submit" style="width: 100%;">- Update Vegetable - </button>
+  </form>
+
+  <form action="register.html" style="margin-top: 15px;">
+    <button class="btn btn-secondary" type="submit" style="width: 100%;">- Delete vegetables -</button>
+  </form>
+
+
+  </form>
+</div>
+
+
+  <script src="js/homescript.js"></script>
+  </script>
+</body>
+</html>
