@@ -428,10 +428,23 @@
       <a href="index.html">Logout</a>
     </div>
   </nav>
- <div style="max-width: 300px; margin: 50px auto; text-align: center;">
-  <h2>Vegetable Details</h2>
+ <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
+  <h2 style="text-align: center;">Add Vegetable Listing</h2>
 
-  <form action="Listning page/add_listing.html" style="margin-top: 20px;">
+  <form action="#" method="POST">
+    <label for="vegType">Vegetable Type:</label><br>
+    <input type="text" id="vegType" name="vegType" placeholder="e.g., Carrot" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="amount">Amount (kg):</label><br>
+    <input type="number" id="amount" name="amount" placeholder="e.g., 100" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="price">Price (Rs / kg):</label><br>
+    <input type="number" id="price" name="price" placeholder="e.g., 250" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" placeholder="Write something about your vegetables..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+     <form action="Listning page/add_listing.html" style="margin-top: 20px;">
     <button class="btn btn-primary" type="submit" style="width: 100%;">- Select Vegetable -</button>
   </form>
 
@@ -442,7 +455,11 @@
   <form action="register.html" style="margin-top: 15px;">
     <button class="btn btn-secondary" type="submit" style="width: 100%;">- Delete vegetables -</button>
   </form>
+
+
+  </form>
 </div>
+
 
   <script src="js/homescript.js"></script>
   </script>
