@@ -6,24 +6,23 @@
     <link rel="stylesheet" href="css/searchstyle.css">
 </head>
 <body>
-
     <header>
         <h1>Search for Vegetables</h1>
         <p>Find fresh produce from local farmers</p>
     </header>
-
+    <form action="search bar.php" method="POST">
     <div class="search-container">
         <form onsubmit="searchVegetables(event)">
-            <input type="text" id="searchInput" placeholder="Enter vegetable name or location..." />
+            <input type="text" id="searchInput" name="search" placeholder="Enter vegetable name" />
             <button type="submit">Search</button>
         </form>
 
         <div class="results" id="searchResults">
-            <!-- Search results will appear here -->
+
         </div>
     </div>
 
-    <script src="js/searchscript.js"></script>
-
+   
+</form>
 </body>
 </html>

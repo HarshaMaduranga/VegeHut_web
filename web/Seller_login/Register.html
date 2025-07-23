@@ -50,25 +50,16 @@
 </head>
 <body>
 
+<form method="post" action="seller.php">
   <div class="container">
-    <h2>Do you have an account?</h2>
-    <button onclick="showLogin()">Yes, I have an account</button>
-    <button onclick="showRegister()">No, I want to register</button>
-
-    <div id="loginForm" class="hidden">
-      <h3>Login</h3>
-      <input type="email" placeholder="Email" required><br>
-      <input type="password" placeholder="Password" required><br>
-      <button>Log In</button>
-    </div>
-
-    <div id="registerForm" class="hidden">
+    <div id="registerForm">
       <h3>Register</h3>
-      <input type="text" placeholder="First Name" required><br>
-      <input type="text" placeholder="Last Name" required><br>
-      <input type="email" placeholder="Email" required><br>
+      <input type="text" placeholder="First Name" name="firstname" required><br>
+      <input type="text" placeholder="Last Name" name="lastname" required><br>
+      <input type="email" placeholder="Email" name="email" required><br>
+      <input type="password" placeholder="Password" name="password" required><br>
 
-      <select required>
+      <select name="district" required>
         <option value="">Select District</option>
         <option value="Ampara">Ampara</option>
         <option value="Anuradhapura">Anuradhapura</option>
@@ -97,24 +88,13 @@
         <option value="Vavuniya">Vavuniya</option>
       </select><br>
 
-      <input type="tel" placeholder="Contact Number" required><br>
-      <input type="password" placeholder="Password" required><br>
+      <input type="tel" placeholder="Contact Number" name="contact_number" required><br>
 
-      <button>Register</button>
+      <button type="submit">Register</button><br>
+      <button><a href="signup.html">Sign Up</a></button>
     </div>
   </div>
-
-  <script>
-    function showLogin() {
-      document.getElementById('loginForm').classList.remove('hidden');
-      document.getElementById('registerForm').classList.add('hidden');
-    }
-
-    function showRegister() {
-      document.getElementById('registerForm').classList.remove('hidden');
-      document.getElementById('loginForm').classList.add('hidden');
-    }
-  </script>
+</form>
 
 </body>
 </html>

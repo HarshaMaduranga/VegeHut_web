@@ -431,10 +431,20 @@
  <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
   <h2 style="text-align: center;">Add Vegetable Listing</h2>
 
-  <form action="#" method="POST">
+  <form method="post" action="vegetables.php">
     <label for="vegType">Vegetable Type:</label><br>
-    <input type="text" id="vegType" name="vegType" placeholder="e.g., Carrot" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
-
+    <select name="vegetabletype" class="input-field" id="vegetabletype" required>
+      <option value="">Vegetable Type</option>
+      <option value="Carrot">Carrot</option>
+      <option value="Cucumber">Cucumber</option>
+      <option value="Tomato">Tomato</option>
+      <option value="Cabbage">Cabbage</option>
+      <option value="Pumpkin">Pumpkin</option>
+      <option value="Potato">Potato</option>
+      <option value="Onion">Onion</option>
+      <option value="Beetroot">Beetroot</option>
+      <option value="Manioc">Manioc</option>
+    </select><br>
     <label for="amount">Amount (kg):</label><br>
     <input type="number" id="amount" name="amount" placeholder="e.g., 100" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
 
@@ -444,12 +454,7 @@
     <label for="description">Description:</label><br>
     <textarea id="description" name="description" placeholder="Write something about your vegetables..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
 
-     <form action="Add vegetables" style="margin-top: 20px;">
-    <button class="btn btn-primary" type="submit" style="width: 100%;">- Submit -</button>
-  </form>
-
-
-  </form>
+     <button type="submit">submit</button><br>
 </div>
 
 

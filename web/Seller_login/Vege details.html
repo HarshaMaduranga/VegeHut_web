@@ -425,43 +425,72 @@
       <a href="#">Home</a>
       <a href="listings.html">Listings</a>
       <a href="vegehut_aboutus.html">About Us</a>
-      <a href="index.html">Logout</a>
+      <a href="Sign Up.html">Seller Mode</a>
     </div>
   </nav>
  <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
   <h2 style="text-align: center;">Add Vegetable Listing</h2>
 
-  <form action="#" method="POST">
+  <form method="post" action="vege details.php">
     <label for="vegType">Vegetable Type:</label><br>
-    <input type="text" id="vegType" name="vegType" placeholder="e.g., Carrot" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+    <select name="vegetabletype" class="input-field" id="vegetabletype" required>
+      <option value="">Vegetable Type</option>
+      <option value="Carrot">Carrot</option>
+      <option value="Cucumber">Cucumber</option>
+      <option value="Tomato">Tomato</option>
+      <option value="Cabbage">Cabbage</option>
+      <option value="Pumpkin">Pumpkin</option>
+      <option value="Potato">Potato</option>
+      <option value="Onion">Onion</option>
+      <option value="Beetroot">Beetroot</option>
+      <option value="Manioc">Manioc</option>
+    </select><br>
 
     <label for="amount">Amount (kg):</label><br>
-    <input type="number" id="amount" name="amount" placeholder="e.g., 100" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+    <input type="number" name="amount" id="amount"><br>
 
     <label for="price">Price (Rs / kg):</label><br>
-    <input type="number" id="price" name="price" placeholder="e.g., 250" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+    <input type="number"  name="price" id="price"><br>
 
     <label for="description">Description:</label><br>
-    <textarea id="description" name="description" placeholder="Write something about your vegetables..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+    <textarea name="description" id="description" rows="4"></textarea><br>
 
-     <form action="Listning page/add_listing.html" style="margin-top: 20px;">
-    <button class="btn btn-primary" type="submit" style="width: 100%;">- Select Vegetable -</button>
-  </form>
+   <button type="button" id="clearButton">Clear</button><br>
+   <button type="button" onclick="loadVegetable()">Select vegetables</button><br>
+   <button type="submit" name="update">Update</button><br>
+   <button type="submit" name="delete" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</button>
 
-  <form action="listings.html" style="margin-top: 15px;">
-    <button class="btn btn-secondary" type="submit" style="width: 100%;">- Update Vegetable - </button>
-  </form>
-
-  <form action="register.html" style="margin-top: 15px;">
-    <button class="btn btn-secondary" type="submit" style="width: 100%;">- Delete vegetables -</button>
-  </form>
 
 
   </form>
 </div>
+  <script>
+        function loadVegetable() {
+            const vegType = document.getElementById("vegetabletype").value;
+            if (vegType === "") return;
 
-
-  <script src="js/homescript.js"></script>
+            fetch('vege details.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `vegetabletype=${encodeURIComponent(vegType)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('amount').value = data.amount || '';
+                document.getElementById('price').value = data.price || '';
+                document.getElementById('description').value = data.description || '';
+            })
+            .catch(error => console.error('❌ Fetch error:', error));
+        }
   </script>
+  <script>
+    document.getElementById('clearButton').addEventListener('click', function () {
+    document.getElementById('vegetabletype').selectedIndex = 0;
+    document.getElementById('amount').value = '';
+    document.getElementById('price').value = '';
+    document.getElementById('description').value = '';
+    });
+  </script>
+
 </body>
 </html>
