@@ -32,10 +32,5 @@
   <!--Load seller data from PHP -->
   <?php include 'carrotselect.php'; ?>
 
-  <button onclick="location.href='add_listing.html'" 
-        style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-  Add Your Product
-  </button>
-
 </body>
 </html>

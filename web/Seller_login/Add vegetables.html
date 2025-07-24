@@ -3,130 +3,107 @@
 <html lang="en">
 <head>
   <Style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Navigation */
-    nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-    
-
-  .logo-title {
-    display: flex;
-    align-items: center;
-    gap: 12px; 
+body {
+  background: linear-gradient(135deg, #c5eac0 0%, #a8e6a3 50%, #8bc34a 100%);
+}
+/* Form Container Enhancement */
+div[style*="max-width: 400px"] {
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgba(248, 250, 252, 0.95)) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(76, 175, 80, 0.2) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(76, 175, 80, 0.1) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
-.logo-title img {
-    height: 60px; 
-    width: auto;
+/* Add subtle glow effect */
+div[style*="max-width: 400px"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4CAF50, #2E7D32, #4CAF50);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
-.logo-title h1 {
-    margin: 0;
-    font-size: 2rem; 
-    font-weight: bold;
-    color: #49c26d; 
+/* Form Title Enhancement */
+div[style*="max-width: 400px"] h2 {
+  color: #2E7D32 !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+  margin-bottom: 2rem !important;
+  position: relative !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-    nav .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    nav a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    nav a::before {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(135deg, #fafdfa, #2E7D32);
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::before {
-      width: 100%;
-    }
-
-    nav a:hover {
-      color: #4CAF50;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: linear-gradient( #4CAF50);
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3); 
-    }
-    
-  body {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('10.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: rgb(10, 1, 1);
+/* Form Labels Enhancement */
+div[style*="max-width: 400px"] label {
+  display: block;
+  font-weight: 600;
+  color: #2E7D32;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
 }
 
+/* Input Fields Enhancement */
+div[style*="max-width: 400px"] input[type="number"],
+div[style*="max-width: 400px"] textarea,
+div[style*="max-width: 400px"] select {
+  width: 100% !important;
+  padding: 15px 20px !important;
+  border: 2px solid rgba(76, 175, 80, 0.2) !important;
+  border-radius: 12px !important;
+  font-size: 1rem !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+}
+
+/* Submit Button Enhancement */
+div[style*="max-width: 400px"] button[type="submit"] {
+  width: 100% !important;
+  padding: 16px 24px !important;
+  background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-top: 20px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3) !important;
+}
+/* Button Ripple Effect */
+div[style*="max-width: 400px"] button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
   </Style>
 </head>
 <body>
-  <nav>
-    <div class="logo-title">
-      <img src="logo.png" alt="logo">
-      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
-    </div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="listings.html">Listings</a>
-      <a href="vegehut_aboutus.html">About Us</a>
-      <a href="index.html">Logout</a>
-    </div>
-  </nav>
- <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
-  <h2 style="text-align: center;">Add Vegetable Listing</h2></br></br>
+ <div style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px;">
+  <h2 style="text-align: center;">Add Vegetable Listing</h2>
 
   <form method="post" action="vegetables.php">
     <label for="vegType">Vegetable Type:</label><br>
@@ -151,13 +128,11 @@
     <label for="description">Description:</label><br>
     <textarea id="description" name="description" placeholder="Write something about your vegetables..." rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
 
-<<<<<<< HEAD
      <button type="submit">submit</button><br>
-=======
-     <form action="Add vegetables" style="margin-top: 20px;">
-    <button class="btn btn-primary" type="submit" style="width: 100%;">- Submit -</button>
-     </form>
->>>>>>> b0796318dc1494f305ba940ebf71730a6ee7154b
 </div>
+
+
+  <script src="js/homescript.js"></script>
+  </script>
 </body>
 </html>
