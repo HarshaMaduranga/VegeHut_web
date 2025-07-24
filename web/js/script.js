@@ -29,6 +29,16 @@ const userInitial = document.getElementById('userInitial');
 const loginError = document.getElementById('loginError');
 const signupError = document.getElementById('signupError');
 
+function showPage(pageId) {
+    // Hide all pages
+    document.getElementById('loginPage').classList.add('hidden');
+    document.getElementById('signupPage').classList.add('hidden');
+    document.getElementById('homePage').classList.add('hidden');
+    
+    // Show the requested page
+    document.getElementById(pageId).classList.remove('hidden');
+}
+
 // Google Auth Provider
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
