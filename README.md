@@ -1,18 +1,5 @@
 # VegeNut.lk - Connecting Sri Lankan Farmers with Bulk Buyers
 
-![VegeNut Logo](https://vegenut.lk/logo.png) *Replace with actual logo path*
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Key Features](#key-features)
-- [Technology Stack](#technology-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Future Enhancements](#future-enhancements)
-- [Team](#team)
-- [License](#license)
-
 ## Project Overview
 
 VegeNut.lk is an innovative web platform designed to revolutionize Sri Lanka's agricultural market by creating a direct digital bridge between local farmers and wholesale vegetable buyers. Our mission is to eliminate middlemen, provide fair market access for farmers, and offer real-time visibility of produce for buyers.
