@@ -4,7 +4,76 @@
 <head>
   <Style>
 
-    /* Navigation */
+/* Body Enhancement */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 30%, #e0f2e0 70%, #d7f0d7 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Enhanced Main Section */
+.section {
+  padding: 80px 2rem 60px 2rem !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  position: relative !important;
+  animation: sectionFadeIn 1s ease-out !important;
+}
+
+/* Enhanced Section Title */
+.section h2 {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: #bbf5bd !important;
+  margin-bottom: 50px !important;
+  text-shadow: 0 4px 8px rgba(46, 125, 50, 0.1) !important;
+  position: relative !important;
+  letter-spacing: -1px !important;
+}
+
+/* Enhanced Button Styling */
+.btn {
+  padding: 20px 40px !important;
+  border: none !important;
+  border-radius: 25px !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  min-width: 220px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Add Vegetable Button (Primary) */
+.btn-primary {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 50%, #3d8b40 100%) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 
+    0 12px 30px rgba(76, 175, 80, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Vegetable Details Button (Secondary) */
+.btn-secondary {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 50%, #1565C0 100%) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 
+    0 12px 30px rgba(33, 150, 243, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Navigation */
     nav {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
@@ -18,8 +87,6 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     }
-
-    
 
   .logo-title {
     display: flex;
@@ -36,7 +103,7 @@
     margin: 0;
     font-size: 2rem; 
     font-weight: bold;
-    color: #49c26d;
+    color: #49c26d; 
 }
 
     nav .nav-links {
@@ -52,100 +119,10 @@
       transition: all 0.3s ease;
       position: relative;
     }
-
-    nav a::before {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(135deg, #fafdfa, #2E7D32);
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::before {
-      width: 100%;
-    }
-
-    nav a:hover {
-      color: #4CAF50;
-    }
-
-   
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: linear-gradient( #4CAF50);
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3); 
-    }
-
-    .btn-secondary {
-      background: linear-gradient( #4CAF50);
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Sections */
-    .section {
-      padding: 5rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-alt {
-      background-color:#4CAF50;
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      margin: 10rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      text-align: center;
-      color: #f2efef;
-      font-weight: 700;
-    }
-
-    /* Benefits */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-  body {
+     body {
   background: 
     linear-gradient(rgba(54, 54, 54, 0.5), rgba(0, 0, 0, 0.5)),
-    url('5.jpg'); 
+    url('../images/farmers.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,24 +131,21 @@
   font-family: Arial, sans-serif;
   color: white;
 }
-
   </Style>
 </head>
 <body>
   <nav>
     <div class="logo-title">
-      <img src="logo.png" alt="logo">
+      <img src="../images/logo.png" alt="logo">
       <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
     </div>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="listings.html">Listings</a>
-      <a href="vegehut_aboutus.html">About Us</a>
-      <a href="signup.html">Seller Mode</a>
+      <a href="../listings.html">Listings</a>
+      <a href="signup.html">Sign In</a>
+      <a href="../homepage.html">Buyer Mode</a>
     </div>
   </nav>
   <div class="section" style="text-align: center; margin-top: 50px;">
-  <h2><b>-SELLER ACCOUNT-</b></h2>
   <h2>Vegetable Management</h2>
   <div style="margin-top: 20px;">
     <form action="Add vegetables.html" style="display: inline-block; margin: 10px;">
@@ -183,5 +157,7 @@
     </form>
   </div>
 </div>
+  <script src="js/homescript.js"></script>
+  </script>
 </body>
 </html>
