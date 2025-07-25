@@ -1,4 +1,4 @@
-# VegeNut.lk - Connecting Sri Lankan Farmers with Bulk Buyers
+# VegeHut.lk - Connecting Sri Lankan Farmers with Bulk Buyers
 
 ## Project Overview
 
@@ -52,7 +52,7 @@ VegeNut.lk is an innovative web platform designed to revolutionize Sri Lanka's a
 
 ## Installation
 
-To run VegeNut.lk locally:
+To run VegeHut.lk locally:
 
 1. Clone the repository:
    ```bash
