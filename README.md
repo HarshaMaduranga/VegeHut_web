@@ -1,60 +1,66 @@
-# VegeHut.lk - Connecting Sri Lankan Farmers with Bulk Buyers
+# 🌿 VegeHut.lk – Fresh Vegetables Directly from Sri Lankan Farmers
 
-## Project Overview
+**VegeHut.lk** is a digital platform created to connect local farmers with bulk vegetable buyers in Sri Lanka. By eliminating middlemen and improving transparency, VegeHut empowers farmers while making vegetable trading faster, fairer, and more reliable.
 
-VegeNut.lk is an innovative web platform designed to revolutionize Sri Lanka's agricultural market by creating a direct digital bridge between local farmers and wholesale vegetable buyers. Our mission is to eliminate middlemen, provide fair market access for farmers, and offer real-time visibility of produce for buyers.
+---
 
-**Core Objectives:**
-- Provide farmers with digital access to a wider market
-- Offer buyers real-time inventory visibility
-- Create a centralized platform for bulk vegetable trading
-- Remove intermediaries to ensure fair prices
+## 🧭 Project Overview
 
-## Key Features
+VegeHut provides a centralized, user-friendly solution to common agricultural market challenges:
+- Low digital access for farmers
+- Lack of a centralized bulk buying platform
+- No real-time updates on availability
+- Unfair pricing due to intermediaries
 
-### For Farmers
-- 🚀 Effortless vegetable listing with details (name, price, quantity, images)
-- 📈 Direct access to wholesale buyers nationwide
-- 💰 Increased profits by eliminating middlemen
-- 🔄 Real-time inventory updates
+Our mission is to promote **fair trade**, **transparent communication**, and **direct farmer-to-buyer connections**.
 
-### For Buyers
-- 🔍 Advanced search by vegetable, price, quantity, and location
-- 📱 Real-time product availability
-- 🤝 Direct farmer connections
-- 🏷️ Transparent pricing information
+---
 
-### Platform Features
-- 🔒 Secure Firebase authentication
-- ⚡ Real-time Firestore database syncing
-- 📱 Responsive web design
-- 🗺️ Location-based filtering
+## 🔑 Key Features
 
-## Technology Stack
+- 🔐 **Secure Login System** using Firebase Authentication
+- 📤 **Quick Listing** – Farmers can list vegetables with name, quantity, price, and image
+- 📦 **Real-Time Product Updates** Listings are immediately reflected upon adding/editing 
+- 🔎 **Smart Search Page** – Filter by vegetable name or keywords
+- 🛒 **Buyer's View** – Clean card-style layout for browsing all available vegetables
+- 🧑‍🌾 **Seller Mode** – Dedicated tools for farmers to manage listings
+- 🛠️ **Edit Vegetable Details** – Update or modify listings at any time
+- 📄 **About Us Page** – Learn about our mission and the team behind VegeHut
 
-**Frontend:**
-- HTML5, CSS3, JavaScript
-- Bootstrap (for responsive design)
+---
 
-**Backend & Database:**
-- Firebase Authentication
-- Firestore (real-time database)
-- PHP for server-side logic
+## 💻 Technology Stack
 
-**Hosting:**
-- Firebase Hosting (primary)
-- Local environment for development
+| Layer           | Tools Used                              |
+|----------------|-------------------------------------------|
+| **Frontend**    | HTML, CSS, JavaScript                    |
+| **Backend**     | PHP, Firebase                            |
+| **Database**    |  SQL                                     |
+| **Authentication** | Firebase Auth                         |
+| **Hosting**     |  Local Environment                       |
+| **Version Control** | GitHub                               |
 
-**Development Tools:**
-- GitHub for version control
-- VS Code as primary IDE
-- Firebase CLI tools
+---
 
-## Installation
+## 🌐 Website Page Flow
 
-To run VegeHut.lk locally:
+- **Login/Register Page** – Account creation and secure login
+- **Welcome Page** – Confirm login and redirect
+- **Home Page** – Introduction, site navigation, and quick links
+- **Product Listing Page** – All vegetables listed with details
+- **Search Page** – Keyword-based vegetable search
+- **Seller Mode Page** – Access control for listing
+- **Add Vegetables Page** – Submit new product entries
+- **Edit Details Page** – Modify existing listings
+- **About Us Page** – Story, mission, and team background
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/vegenut.git
-   cd vegenut
+---
+
+## 📝 License
+
+This project is for academic purposes and is not yet licensed for commercial use.  
+For questions or collaborations, please contact the project team.
+
+---
+
+> 🚀 Thank you for exploring VegeHut.lk – a smart, fair, and modern platform for Sri Lanka’s vegetable trade!
