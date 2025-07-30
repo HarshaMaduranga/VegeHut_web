@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <title>Search - VegeHut.lk</title>
     <link rel="stylesheet" href="css/searchstyle.css">
+    <style>
+        nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-title img {
+    height: 60px; 
+    width: auto;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #49c26d; 
+}
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #fafdfa, #2E7D32);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::before {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    </style>
 </head>
 <body>
-
+<nav>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="logo">
+      <h1 class="text-xl font-bold text-gray-900">VegeHut</h1>
+    </div>
+    <div class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="listings.html">Listings</a>
+      <a href="vegehut_aboutus.html">About Us</a>
+      <a href="Seller_login/signup.html">Seller Mode</a>
+    </div>
+  </nav>
 <header>
     <h1>Search for Vegetables</h1>
     <p>Find fresh produce from local farmers</p>
