@@ -37,7 +37,7 @@ Our mission is to promote **fair trade**, **transparent communication**, and **d
 | **Backend**     | PHP, Firebase                            |
 | **Database**    |  SQL                                     |
 | **Authentication** | Firebase Auth                         |
-| **Hosting**     |  Local Environment                       |
+| **Hosting**     | https://vegehut.free.nf                  |
 | **Version Control** | GitHub                               |
 
 ---
